@@ -1,0 +1,15 @@
+body {
+    background-color: #f8f9fa;
+}
+
+#form-container {
+    min-height: 3000px;
+}
+
+#custom-navbar {
+    height: 80px !important;
+}
+
+.card-heading {
+    background-color: #960001;
+}
