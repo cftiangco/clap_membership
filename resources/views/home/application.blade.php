@@ -12,7 +12,12 @@
             <!-- <h4 class="mb-4">MEMBERSHIP APPLICATION FORM</h4> -->
             <form action="/application" method="POST">
             @csrf
-
+            
+            @if($errors->any())
+                @foreach($errors->all() as $error)
+                    <div class="alert alert-danger" role="alert">{{ $error }}</div>
+                @endforeach
+            @endif
             <!--  ============================= START CARD SECTION ========================= -->
             <div class="card shadow mb-3">
                 <h5 class="card-header text-light card-heading">PERSONAL DATA</h5>
@@ -33,22 +38,22 @@
 
                         <div class="col-12 col-lg-4 mb-3">
                             <label for="last_name" class="form-label">Last Name <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Dela Cruz" aria-label="Last name">
+                            <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Dela Cruz" aria-label="Last name" value="{{old('last_name')}}">
                         </div>
 
                         <div class="col-12 col-lg-4 mb-3">
                             <label for="first_name" class="form-label">First Name <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Juan" aria-label="First name">
+                            <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Juan" aria-label="First name" value="{{old('first_name')}}">
                         </div>
 
                         <div class="col-12 col-lg-4 mb-3">
                             <label for="middle_name" class="form-label">Middle Name</label>
-                            <input type="text" class="form-control" id="middle_name" name="middle_name" aria-label="Middle name" placeholder="Optional">
+                            <input type="text" class="form-control" id="middle_name" name="middle_name" aria-label="Middle name" placeholder="Optional" value="{{old('middle_name')}}">
                         </div>
                         
                         <div class="col-12 col-lg-4 mb-3">
                             <label for="birhday" class="form-label">Birthday <span class="text-danger">*</span> </label>
-                            <input type="date" class="form-control" id="birhday" name="birthday" aria-label="birthday" placeholder="Optional">
+                            <input type="date" class="form-control" id="birhday" name="birthday" aria-label="birthday" placeholder="Optional" value="{{old('birthday')}}">
                         </div>
 
                         <div class="col-12 col-lg-4 mb-3">
@@ -61,57 +66,57 @@
 
                         <div class="col-12 col-lg-4 mb-3">
                             <label for="email" class="form-label">Email <span class="text-danger">*</span> </label>
-                            <input type="email" class="form-control" id="email" name="email" placeholder="your.email@email.com">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="your.email@email.com" value="{{old('email')}}">
                         </div>
 
                         <div class="col-12 col-lg-4 mb-3">
                             <label for="contact_no" class="form-label">Contact # <span class="text-danger">*</span> </label>
-                            <input type="text" class="form-control" id="contact_no" name="contact_no" placeholder="">
+                            <input type="text" class="form-control" id="contact_no" name="contact_no" placeholder="" value="{{old('contact_no')}}">
                         </div>
 
                         <div class="col-12 col-lg-8 mb-3">
                             <label for="address" class="form-label">Address <span class="text-danger">*</span> </label>
-                            <input type="text" class="form-control" id="address" name="address" placeholder="Your complete address">
+                            <input type="text" class="form-control" id="address" name="address" placeholder="Your complete address" value="{{old('address')}}">
                         </div>
                         
                         <div class="col-12 col-lg-6 mb-3">
                             <label for="prc_no" class="form-label">PRC License # <span class="text-danger">*</span> </label>
-                            <input type="text" class="form-control" id="prc_no" name="prc_no" placeholder="">
+                            <input type="text" class="form-control" id="prc_no" name="prc_no" placeholder="" value="{{old('prc_no')}}">
                         </div>
 
                         <div class="col-12 col-lg-6 mb-3">
                             <label for="prc_date_issued" class="form-label">Date Issued <span class="text-danger">*</span> </label>
-                            <input type="date" class="form-control" id="prc_date_issued" name="prc_date_issued" placeholder="">
+                            <input type="date" class="form-control" id="prc_date_issued" name="prc_date_issued" placeholder="" value="{{old('prc_date_issued')}}">
                         </div>
 
                         <div class="col-12 col-lg-8 mb-3">
                             <label for="hospital_affiliation" class="form-label">Hospital Affiliation</label>
-                            <input type="text" class="form-control" id="hospital_affiliation" name="hospital_affiliation" placeholder="">
+                            <input type="text" class="form-control" id="hospital_affiliation" name="hospital_affiliation" placeholder="" value="{{old('hospital_affiliation')}}">
                         </div>
 
                         <div class="col-12 col-lg-4 mb-3">
                             <label for="position" class="form-label">Position</label>
-                            <input type="text" class="form-control" id="position" name="position" placeholder="">
+                            <input type="text" class="form-control" id="position" name="position" placeholder="" value="{{old('position')}}">
                         </div>
 
                         <div class="col-12 col-lg-4 mb-3">
                             <label for="bussiness_phone" class="form-label">Business Phone</label>
-                            <input type="text" class="form-control" id="bussiness_phone" name="business_phone" placeholder="">
+                            <input type="text" class="form-control" id="bussiness_phone" name="business_phone" placeholder="" value="{{old('business_phone')}}">
                         </div>
 
                         <div class="col-12 col-lg-4 mb-3">
                             <label for="number_of_years_employed" class="form-label">No. of Years Employed in Present Agency</label>
-                            <input type="number" class="form-control" id="number_of_years_employed" name="number_of_years_employed" placeholder="">
+                            <input type="number" class="form-control" id="number_of_years_employed" name="number_of_years_employed" placeholder="" value="{{old('number_of_years_employed')}}">
                         </div>
 
                         <div class="col-12 col-lg-12 mb-3">
                             <label for="bussiness_address" class="form-label">Business Address</label>
-                            <textarea class="form-control" id="bussiness_address" name="business_address" rows="3"></textarea>
+                            <textarea class="form-control" id="bussiness_address" name="business_address" rows="3">{{old('business_address')}}</textarea>
                         </div>
 
                         <div class="col-12 col-lg-12 mb-3">
-                            <label for="employment_history" class="form-label">Other Relevant Employment History: </label>
-                            <textarea class="form-control" id="employment_history" name="employment_history" rows="3"></textarea>
+                            <label for="employment_history" class="form-label">Other Relevant Employment History</label>
+                            <textarea class="form-control" id="employment_history" name="employment_history" rows="3">{{old('employment_history')}}</textarea>
                         </div>
 
                     </div>
@@ -147,7 +152,7 @@
                             <label class="form-check-label" for="profession_4" name="profession">
                                 Others:
                             </label>
-                            <input type="text" class="form-control form-control-sm mt-2" name="profession_other_text" placeholder="Please specify">
+                            <input type="text" class="form-control form-control-sm mt-2" name="profession_other_text" value="{{old('profession_other_text')}}" placeholder="Please specify">
                         </div>
 
                         
@@ -166,27 +171,27 @@
 
                         <div class="col-12 col-lg-6 mb-3">
                             <label for="college_university" class="form-label">College/University <span class="text-danger">*</span> </label>
-                            <input type="text" class="form-control" id="college_university" name="college_university" placeholder="">
+                            <input type="text" class="form-control" id="college_university" name="college_university" value="{{old('college_university')}}" placeholder="">
                         </div>
 
                         <div class="col-12 col-lg-6 mb-3">
                             <label for="college_university_degree" class="form-label">Degree <span class="text-danger">*</span> </label>
-                            <input type="text" class="form-control" id="college_university_degree" name="college_university_degree" placeholder="">
+                            <input type="text" class="form-control" id="college_university_degree" name="college_university_degree" value="{{old('college_university_degree')}}" placeholder="">
                         </div>
 
                         <div class="col-12 col-lg-6 mb-3">
                             <label for="post_graduate" class="form-label">Post-Graduate Study</label>
-                            <input type="text" class="form-control" id="post_graduate" name="post_graduate" placeholder="">
+                            <input type="text" class="form-control" id="post_graduate" name="post_graduate" value="{{old('post_graduate')}}" placeholder="">
                         </div>
 
                         <div class="col-12 col-lg-6 mb-3">
                             <label for="post_graduate_degree" class="form-label">Degree</label>
-                            <input type="text" class="form-control" id="post_graduate_degree" name="post_graduate_degree" placeholder="">
+                            <input type="text" class="form-control" id="post_graduate_degree" name="post_graduate_degree" value="{{old('post_graduate_degree')}}" placeholder="">
                         </div>
 
                         <div class="col-12 col-lg-12 mb-3">
                             <label for="other_degrees_earned" class="form-label">Other Degrees Earned</label>
-                            <textarea class="form-control" id="other_degrees_earned" name="other_degree_earned" rows="3"></textarea>
+                            <textarea class="form-control" id="other_degrees_earned" name="other_degree_earned" rows="3">{{old('other_degree_earned')}}</textarea>
                         </div>
 
                     </div>
@@ -225,7 +230,7 @@
                         <hr>
                         <div class="col-12 col-lg-12 mb-3">
                             <label for="awards" class="form-label">Awards/Honors Received / Publications</label>
-                            <textarea class="form-control" id="awards" name="awards" rows="3"></textarea>
+                            <textarea class="form-control" id="awards" name="awards" rows="3">{{old('awards')}}</textarea>
                         </div>
 
                     </div>
@@ -267,7 +272,7 @@
                             <label class="form-check-label" for="membership_category_4">
                                 Others:
                             </label>
-                            <input type="text" class="form-control form-control-sm mt-2" placeholder="Please specify" name="membership_category_other_text">
+                            <input type="text" class="form-control form-control-sm mt-2" placeholder="Please specify" name="membership_category_other_text" value="{{old('membership_category_other_text')}}">
                         </div>
 
                         <div class="col-12 col-lg-6 mb-3">
