@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-1 d-none d-lg-block"></div>
 
-        <div class="col-12 col-lg-9" id="form-container">
+        <div class="col-12 col-lg-10" id="form-container">
             <div class="my-5 mx-auto">
                 <img src="{{asset('/images/cathlab_full.png')}}" alt="cathlab logo" style="width:80%;height:auto;">
             </div>
@@ -20,7 +20,7 @@
             @endif
             <!--  ============================= START CARD SECTION ========================= -->
             <div class="card shadow mb-3">
-                <h5 class="card-header text-light card-heading">PERSONAL DATAsss</h5>
+                <h5 class="card-header text-light card-heading">PERSONAL DATA</h5>
                 <div class="card-body">
 
                     <div class="row mb-3">

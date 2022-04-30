@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class RegistrationController extends Controller
+class AccountController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +13,12 @@ class RegistrationController extends Controller
      */
     public function index()
     {
-        return view('home/application');
+        return view('dashboard/users/accounts');
+    }
+
+    public function login()
+    {
+        return view('dashboard/users/login');
     }
 
     /**
@@ -34,20 +39,7 @@ class RegistrationController extends Controller
      */
     public function store(Request $request)
     {
-        $validator = $request->validate([
-            'last_name' => 'required',
-            'first_name' => 'required',
-            'birthday' => 'required',
-            'email' => 'required',
-            'contact_no' => 'required',
-            'address' => 'required',
-            'prc_no' => 'required',
-            'prc_date_issued' => 'required',
-            'certify' => 'required'
-        ]);
-        
-        
-        return back()->withInput();
+        //
     }
 
     /**

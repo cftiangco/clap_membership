@@ -16,6 +16,16 @@ class MemberController extends Controller
         return view('dashboard/members/list');
     }
 
+    public function active()
+    {
+        return view('dashboard/members/active');
+    }
+
+    public function forapproval()
+    {
+        return view('dashboard/members/forapproval');
+    }
+
     /**
      * Show the form for creating a new resource.
      *

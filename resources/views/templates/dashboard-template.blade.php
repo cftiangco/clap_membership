@@ -7,15 +7,20 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>CLAP Dashboard</title>
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('/dashboard-assets')}}/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('/images')}}/clap.png">
     <!-- Pignose Calender -->
     <link href="{{asset('/dashboard-assets')}}/plugins/pg-calendar/css/pignose.calendar.min.css" rel="stylesheet">
     <!-- Chartist -->
     <link rel="stylesheet" href="{{asset('/dashboard-assets')}}/plugins/chartist/css/chartist.min.css">
     <link rel="stylesheet" href="{{asset('/dashboard-assets')}}/plugins/chartist-plugin-tooltips/css/chartist-plugin-tooltip.css">
     <!-- Custom Stylesheet -->
+    <link href="{{asset('/dashboard-assets')}}/plugins/tables/css/datatable/dataTables.bootstrap4.min.css" rel="stylesheet">
     <link href="{{asset('/dashboard-assets')}}/css/style.css" rel="stylesheet">
-
+    <style>
+        .dataTables_wrapper .dataTables_filter input {
+            border-bottom: 0.5px solid #aaaaaa;
+        }
+    </style>
 </head>
 
 <body>
@@ -23,13 +28,13 @@
     <!--*******************
         Preloader start
     ********************-->
-    <div id="preloader">
+    {{-- <div id="preloader">
         <div class="loader">
             <svg class="circular" viewBox="25 25 50 50">
                 <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3" stroke-miterlimit="10" />
             </svg>
         </div>
-    </div>
+    </div> --}}
     <!--*******************
         Preloader end
     ********************-->
@@ -45,11 +50,11 @@
         ***********************************-->
         <div class="nav-header">
             <div class="brand-logo">
-                <a href="index.html">
+                <a href="/dashboard">
                     <b class="logo-abbr"><img src="{{asset('/dashboard-assets')}}/images/logo.png" alt="CLAP Logo"> </b>
                     <span class="logo-compact"><img src="{{asset('/dashboard-assets')}}/images/logo-compact.png" alt=""></span>
                     <span class="brand-title">
-                        {{-- <img src="{{asset('/dashboard-assets')}}/images/logo-text1.png" alt="CLAP Logo"> --}}
+                        {{-- <img src="{{asset('/images')}}/clap.png" alt="CLAP Logo" style="width:50px;height:auto"> --}}
                         <h3 class="text-white fw-bold">CLAP</h3>
                     </span>
                 </a>
@@ -119,8 +124,9 @@
                             <i class="icon-user menu-icon"></i><span class="nav-text">Members</span>
                         </a>
                         <ul aria-expanded="false">
-                            <li><a href="./index.html">List</a></li>
-                            <li><a href="./index.html">For Approval</a></li>
+                            <li><a href="/dashboard/members/all">All</a></li>
+                            <li><a href="/dashboard/members/active">Active</a></li>
+                            <li><a href="/dashboard/members/forapproval">For Approval</a></li>
                         </ul>
                     </li>
                     <li class="mega-menu mega-menu-sm">
@@ -128,21 +134,19 @@
                             <i class="icon-wallet menu-icon"></i><span class="nav-text">Payments</span>
                         </a>
                         <ul aria-expanded="false">
-                            <li><a href="./layout-blank.html">Request</a></li>
-                            <li><a href="./layout-one-column.html">History</a></li>
+                            <li><a href="/dashboard/payment/request">Request</a></li>
+                            <li><a href="/dashboard/payment/history">History</a></li>
                         </ul>
                     </li>
-                    {{-- <li class="nav-label">Content</li>
+                    <li class="nav-label">Admin</li>
                     <li>
                         <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                            <i class="icon-envelope menu-icon"></i> <span class="nav-text">Email</span>
+                            <i class="icon-user menu-icon"></i> <span class="nav-text">Users</span>
                         </a>
                         <ul aria-expanded="false">
-                            <li><a href="./email-inbox.html">Inbox</a></li>
-                            <li><a href="./email-read.html">Read</a></li>
-                            <li><a href="./email-compose.html">Compose</a></li>
+                            <li><a href="/dashboard/users/accounts">Accounts</a></li>
                         </ul>
-                    </li> --}}
+                    </li>
                 </ul>
             </div>
         </div>
@@ -207,6 +211,9 @@
 
 
     <script src="{{asset('/dashboard-assets')}}/js/dashboard/dashboard-1.js"></script>
+    <script src="{{asset('/dashboard-assets')}}/plugins/tables/js/jquery.dataTables.min.js"></script>
+    <script src="{{asset('/dashboard-assets')}}/plugins/tables/js/datatable/dataTables.bootstrap4.min.js"></script>
+    <script src="{{asset('/dashboard-assets')}}/plugins/tables/js/datatable-init/datatable-basic.min.js"></script>
 
 </body>
 

@@ -5,30 +5,6 @@
 <div class="container-fluid mt-3">
     <div class="row">
         <div class="col-lg-3 col-sm-6">
-            <div class="card gradient-2">
-                <div class="card-body">
-                    <h3 class="card-title text-white">Total Sales</h3>
-                    <div class="d-inline-block">
-                        <h2 class="text-white">&#8369;102,155</h2>
-                        <p class="text-white mb-0">Jan - March 2022</p>
-                    </div>
-                    <span class="float-right display-5 opacity-5"><i class="fa fa-shopping-cart"></i></span>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-sm-6">
-            <div class="card gradient-1">
-                <div class="card-body">
-                    <h3 class="card-title text-white">Monthly Sales</h3>
-                    <div class="d-inline-block">
-                        <h2 class="text-white">&#8369;12,155</h2>
-                        <p class="text-white mb-0">Feb - March 2022</p>
-                    </div>
-                    <span class="float-right display-5 opacity-5"><i class="fa fa-shopping-cart"></i></span>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-sm-6">
             <div class="card gradient-9">
                 <div class="card-body">
                     <h3 class="card-title text-white">Member Request</h3>
@@ -45,7 +21,7 @@
                 <div class="card-body">
                     <h3 class="card-title text-white">Payment Request</h3>
                     <div class="d-inline-block">
-                        <h2 class="text-white">&#8369;3,500</h2>
+                        <h2 class="text-white">&#8369;23,500</h2>
                         <p class="text-white mb-0">Today</p>
                     </div>
                     <span class="float-right display-5 opacity-5"><i class="fa fa-credit-card-alt"></i></span>

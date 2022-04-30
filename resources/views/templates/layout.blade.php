@@ -10,6 +10,7 @@
     <link href="{{asset('/assets/css/styles.css')}}" rel="stylesheet">
     
     <title>Membership - CLAP</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('/images')}}/clap.png">
   </head>
   <body>
 
