@@ -91,4 +91,16 @@ class MemberController extends Controller
     {
         //
     }
+
+    /*************** MEMBERS PORTAL **************/
+    public function home()
+    {
+        return view('members/home');
+    }
+
+    public function login()
+    {
+        return view('members/login');
+    }
+
 }

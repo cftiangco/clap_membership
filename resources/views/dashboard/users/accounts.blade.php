@@ -8,7 +8,7 @@
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-center">
                         <h4 class="card-title">Accounts</h4>
-                        <a href="#" class="btn btn-primary">Create New Account</a>
+                        <a href="/dashboard/users/accounts/new" class="btn btn-primary">Create New Account</a>
                     </div>
                     <div class="table-responsive">
                         <table class="table table-striped table-bordered zero-configuration">

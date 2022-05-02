@@ -7,7 +7,8 @@ use App\Http\Controllers\MemberController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\AccountController;
 
-Route::get('/',[RegistrationController::class,'index']);
+Route::get('/',[MemberController::class,'home']);
+Route::get('/login',[MemberController::class,'login']);
 
 Route::get('/application',[RegistrationController::class,'index']);
 Route::post('/application',[RegistrationController::class,'store']);
@@ -22,4 +23,5 @@ Route::get('/dashboard/payment/request',[PaymentController::class,'index']);
 Route::get('/dashboard/payment/history',[PaymentController::class,'history']);
 
 Route::get('/dashboard/users/accounts',[AccountController::class,'index']);
+Route::get('/dashboard/users/accounts/new',[AccountController::class,'new']);
 Route::get('/dashboard/login',[AccountController::class,'login']);

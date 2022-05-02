@@ -12,7 +12,7 @@
                                 <div class="d-flex justify-content-center mb-2">
                                     <img src="{{asset('/images')}}/clap.png" alt="CLAP Logo" style="width:25%;height:auto">
                                 </div>
-                                <a class="text-center" href="#"><h4 style="color:#232b2b">Admin Dashboard</h4></a>
+                                <a class="text-center" href="#"><h4 style="color:#232b2b">Members Portal</h4></a>
         
                                 <form class="mt-5 mb-5 login-input">
                                     <div class="form-group">

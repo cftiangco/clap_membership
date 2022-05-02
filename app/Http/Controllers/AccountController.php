@@ -21,6 +21,11 @@ class AccountController extends Controller
         return view('dashboard/users/login');
     }
 
+    public function new()
+    {
+        return view('dashboard/users/new');
+    }
+
     /**
      * Show the form for creating a new resource.
      *
